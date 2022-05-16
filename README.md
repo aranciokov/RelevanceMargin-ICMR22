@@ -23,7 +23,7 @@ export PYTHONPATH=src/
 
 #### Training
 To launch a training (with JPoSE) on EPIC-Kitchens-100:
-``python -m src.train_jpose_tripletRelBased``
+``python -m train.train_jpose_tripletRelBased``
 - to use the *proposed relevance margin*, specify ``--rel-margin --all-noun-classes``
 - add ``--rgb`` to use only RGB features, ``--rgb-flow`` to use RGB+Flow, otherwise do not add anything to use RGB+Flow+Audio (TBN features)
 - to only use cross-modality loss, specify ``--tt-weight 0 --vv-weight 0``
@@ -35,7 +35,7 @@ To train on YouCook2, specify ``--dataset youcook2``. Similar options are availa
 
 #### Evaluating
 To test a specific checkpoint:
-``python -m src.test_jpose_tripletRelBased checkpoint``
+``python -m train.test_jpose_triplet checkpoint``
 - use the same options used during training (e.g. if training was performed with RGB-only features, specify ``--rgb``)
 
 #### Pretrained models
